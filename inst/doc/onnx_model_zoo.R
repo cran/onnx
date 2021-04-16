@@ -1,14 +1,14 @@
-## ----setup, include=FALSE------------------------------------------------
+## ----setup, include=FALSE-----------------------------------------------------
 knitr::opts_chunk$set(echo = TRUE)
 knitr::opts_chunk$set(eval = FALSE)
 
-## ----eval=FALSE----------------------------------------------------------
+## ----eval=FALSE---------------------------------------------------------------
 #  library(onnx)
 #  library(reticulate)
 #  np <- import("numpy", convert = FALSE)
 #  backend <- import("onnx_tf.backend")
 
-## ----eval=FALSE----------------------------------------------------------
+## ----eval=FALSE---------------------------------------------------------------
 #  load_npz_samples <- function(npz_path) {
 #    sample <- np$load(normalizePath(npz_path), encoding = 'bytes')
 #    list(
@@ -17,7 +17,7 @@ knitr::opts_chunk$set(eval = FALSE)
 #    )
 #  }
 
-## ----eval=FALSE----------------------------------------------------------
+## ----eval=FALSE---------------------------------------------------------------
 #  # Specify paths to ONNX model and testing samples
 #  onnx_model_dir <- "~/Downloads/resnet50"
 #  model_pb_path <- file.path(onnx_model_dir, "model.onnx")
@@ -34,6 +34,6 @@ knitr::opts_chunk$set(eval = FALSE)
 #  # Run the model with an onnx backend
 #  actual_outputs <- backend$run_model(model, inputs)
 
-## ----eval=FALSE----------------------------------------------------------
+## ----eval=FALSE---------------------------------------------------------------
 #  np$testing$assert_almost_equal(expected_outputs, actual_outputs, decimal = 6)
 
